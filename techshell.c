@@ -1,7 +1,7 @@
 #define _POSIX_C_SOURCE 200809L
 /*
  * Name: Shreyasri Rijal
- * CSC 222 - Simple Shell Project
+ * CSC 222 - Shell Project
  * A small interactive shell with built-in cd/exit, external commands,
  * input/output redirection, quoting, and backslash escaping.
  */
