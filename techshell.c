@@ -66,8 +66,8 @@ static int append_character(char **buffer, size_t *length, size_t *capacity, cha
     return 0;
 }
 
-/* Tokenize whitespace, quotes, escaped characters and redirection symbols.
- * Return -1 on invalid input or allocation failure. */
+/* Read the user's input and separate it into commands and symbols.
+ * Return -1 if there is an error. */
 static int next_token(const char **position, char **token, int *is_operator) {
     const char *p = *position;
     while (*p && isspace((unsigned char)*p)) ++p;
