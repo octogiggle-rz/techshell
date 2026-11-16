@@ -150,8 +150,8 @@ static void show_prompt(void) {
     }
     fflush(stdout);
 }
-
-/* Redirection must be opened before exec; failures prevent execution. */
+/* Set up input and output redirection before running the command.
+ * If something goes wrong, don't run the command. */
 static int apply_redirection(const Command *cmd) {
     if (cmd->input_file) {
         int fd = open(cmd->input_file, O_RDONLY);
